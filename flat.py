@@ -16,4 +16,4 @@ class Flatmate:
         self.days_in_house = days_in_house
 
     def pays(self,bill,flatmate2):
-        return bill.amount * (self.days_in_house / (self.days_in_house + flatmate2.days_in_house))
+        return round(bill.amount * (self.days_in_house / (self.days_in_house + flatmate2.days_in_house)),2)

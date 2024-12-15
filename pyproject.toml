@@ -6,6 +6,8 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "fpdf>=1.7.2",
+    "python-dotenv>=1.0.1",
+    "pyuploadcare>=6.0.0",
     "space-tracer>=4.12.0",
 ]
 

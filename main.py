@@ -1,5 +1,12 @@
+import pdfgenerate
 from flat import Bill, Flatmate
 from pdfgenerate import PdfReport
+from dotenv import load_dotenv
+import os
+load_dotenv()
+public_key = os.getenv("UPLOADCARE_PUBLIC_KEY")
+secret_key = os.getenv("UPLOADCARE_SECRET_KEY")
+
 
 input_amount = int(input('Enter the amount of the bill: '))
 input_period = input('Enter the period of the bill: ')
@@ -18,3 +25,5 @@ report_generator.generate(flatmate1,flatmate2,bill1)
 
 print(flatmate1.pays(bill1,flatmate2))
 print(flatmate2.pays(bill1,flatmate1))
+
+print(f'Bill uploadlink has been generated : {pdfgenerate.FileSharer(report_generator.filename,public_key,secret_key).share()}')
