@@ -9,6 +9,12 @@ dependencies = [
     "python-dotenv>=1.0.1",
     "pyuploadcare>=6.0.0",
     "space-tracer>=4.12.0",
+    "certifi",
+    "chardet",
+    "idna",
+    "requests",
+    "trafaret",
+    "urllib3"
 ]
 
 [dependency-groups]
